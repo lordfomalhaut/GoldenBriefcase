@@ -1,0 +1,24 @@
+{
+  "name": "goldenbriefcase",
+  "version": "1.0.0",
+  "description": "Proyecto para la clase de programacion web",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordfomalhaut/GoldenBriefcase.git"
+  },
+  "author": "Josue Salamanca, Juan Sebastian Nieto, Marcelo Pérez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lordfomalhaut/GoldenBriefcase/issues"
+  },
+  "homepage": "https://github.com/lordfomalhaut/GoldenBriefcase#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
