@@ -4,7 +4,7 @@
   "description": "Proyecto para la clase de programacion web",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "dev": "nodemon src"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,22 @@
   },
   "homepage": "https://github.com/lordfomalhaut/GoldenBriefcase#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-mysql-session": "^2.1.7",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.2",
     "mongoose": "^6.0.7",
+    "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.12"
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "timeago.js": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
