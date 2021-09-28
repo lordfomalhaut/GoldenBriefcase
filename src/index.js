@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const path = require('path');
+const { btoa } = require('buffer');
 
 
 // Inicialización
@@ -21,12 +22,15 @@ app.engine('.hbs', handlebars({
 app.set('view engine', '.hbs');
 
 
+
 // Middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({
     extended: false
 }));
 app.use(express.json());
+
+
 
 
 
@@ -46,7 +50,10 @@ app.use('/links', require('./routes/links'));
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); 
 
 
 // Iniciar Servidor
