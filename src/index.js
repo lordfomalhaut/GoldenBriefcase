@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
-const exphbs = require('express-handlebars');
 const path = require('path');
 
 
@@ -12,14 +11,14 @@ const app = express();
 // Configuración
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('.handlebars', exphbs({
+app.engine('.hbs', handlebars({
    defaultLayout: 'main',
    layoutsDir:  path.join(app.get('views'), 'layouts'),
    partialsDir: path.join(app.get('views'), 'partials'),
    extname: '.hbs',
    helpers: require('./lib/handebars')
 }));
-app.set('view engine', '.handlebars');
+app.set('view engine', '.hbs');
 
 
 // Middlewares

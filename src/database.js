@@ -1,6 +1,6 @@
 const mysql = require('mysql');
+const { promisify } = require('util');
 const { database } = require('./keys');
-
 
 const pool = mysql.createPool(database);
 
@@ -16,4 +16,12 @@ pool.getConnection((err, connection) => {
             console.error('DATABASE CONNECTION WAS REFUSED');
         }
     }
+
+    if(connection) connection.release();
+    console.log('DB Conectada');
+    return;
 });
+
+pool.query = promisify(pool.query);
+
+module.exports = pool;
