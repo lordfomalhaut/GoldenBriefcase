@@ -8,7 +8,9 @@ router.get('/add', (req, res) => {
 });
 
 router.post('/add', (req, res) => {
-    res.render('links/add');
+    res.send(
+        'recibido'
+    );
 });
 
 
