@@ -1,3 +1,20 @@
-* {
-    padding: 0;
+body{
+    min-height: 100vh;
+    /* outline: 1px solid red !important; */
+}
+.btn-login {
+    transition: background-color .5s;
+  }
+.btn-login:hover {
+    background-color: #e4b52a !important;
+}
+.container-cont{
+    /* outline: 1px solid red !important; */
+    margin: auto;
+}
+.container-sign {
+    /* border: 1px solid #e4b52a !important; */
+    /* box-shadow: 8px 8px 0px -1px rgba(42, 154, 228, 0.64); */
+    /* box-shadow: 8px 8px 0px -1px rgba(228,181,42,0.64); */
+    border: 1px solid #a3a2a2;
 }

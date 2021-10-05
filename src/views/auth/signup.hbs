@@ -1,26 +1,35 @@
-<div class="container p-4">
+<div class="container p-4 container-cont">
     <div class="row">
         <div class="col-md-4 mx-auto">
-            <div class="card text-center">
+            <div class="card text-center container-sign">
                 <div class="card-header">
-                    <h3>Registro de usuario</h3>
+                    <h3>Registro de usuarios</h3>
                 </div>
                 <div class="card-body">
                     <form action="/signup" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="username"  placeholder="Username" class="form-control">
+
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input class="uk-input" name="username"  type="text">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email"  placeholder="Email" class="form-control">
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                <input class="uk-input" name="email" type="text">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="password" name="password"  class="form-control" placeholder="Password">
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                <input class="uk-input" name="password" type="password">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <button class="btn btn-success btn-block">
-                                Registrar
-                            </button>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-default btn-login">Registrar</button>
                         </div>
+
                     </form>
                 </div>
             </div>
