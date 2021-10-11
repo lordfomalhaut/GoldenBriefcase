@@ -1,6 +1,9 @@
+.outline{
+    outline: 1px solid red;;
+}
 body{
     min-height: 100vh;
-    /* outline: 1px solid red !important; */
+    outline: 1px solid red !important;
 }
 .btn-login {
     transition: background-color .5s;
@@ -10,11 +13,18 @@ body{
 }
 .container-cont{
     /* outline: 1px solid red !important; */
-    margin: auto;
+    /* background-color: #e5e5f7;
+    opacity: 0.3;
+    background-image:  linear-gradient(30deg, #e4b52a 12%, transparent 12.5%, transparent 87%, #e4b52a 87.5%, #e4b52a), linear-gradient(150deg, #e4b52a 12%, transparent 12.5%, transparent 87%, #e4b52a 87.5%, #e4b52a), linear-gradient(30deg, #e4b52a 12%, transparent 12.5%, transparent 87%, #e4b52a 87.5%, #e4b52a), linear-gradient(150deg, #e4b52a 12%, transparent 12.5%, transparent 87%, #e4b52a 87.5%, #e4b52a), linear-gradient(60deg, #e4b52a77 25%, transparent 25.5%, transparent 75%, #e4b52a77 75%, #e4b52a77), linear-gradient(60deg, #e4b52a77 25%, transparent 25.5%, transparent 75%, #e4b52a77 75%, #e4b52a77);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; */
 }
 .container-sign {
     /* border: 1px solid #e4b52a !important; */
     /* box-shadow: 8px 8px 0px -1px rgba(42, 154, 228, 0.64); */
     /* box-shadow: 8px 8px 0px -1px rgba(228,181,42,0.64); */
     border: 1px solid #a3a2a2;
+}
+.row-container{
+    /* max-width: 50%; */
 }

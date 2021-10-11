@@ -4,7 +4,7 @@ const router = express.Router();
 const pool = require('../database');
 
 router.get('/add', (req, res) => {
-    res.render('links/add');
+    res.render('movies/add');
 });
 
 router.post('/add', async (req, res) => {
@@ -24,6 +24,13 @@ router.post('/add', async (req, res) => {
     res.send(
         'recibido'
     );
+});
+
+router.get('/', async (req, res) => {
+    const movies = await pool.query('SELECT * FROM movies');
+    console.log(movies);
+    res.send('peliculas iran aqui');
+
 });
 
 
