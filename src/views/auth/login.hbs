@@ -1,31 +1,37 @@
-<div class="container p-4 mr-5 mt-5 container-cont">
-    <div class="row  ml-5 mt-5 row-container">
-        <div class="col-md-6 mt-5 mx-auto">
-            <div class="card text-center mr-5 ml-5 container-sign ">
-                <div class="card-header">
-                    <h3>Inicio de Sesion</h3>
-                </div>
-                <div class="card-body">
-                    <form action="/login" method="POST">
+<div class="bg-cont uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
+    <h2 class="login-phrase">
+        La belleza artistica no consiste en representar una cosa bella, sino en la bella representacion de una cosa. <br><br>
+        ~Immanuel Kant~
+    </h2>
+    <div class="container pt-5 container-cont ">
+        <div class="row pt-5 row-container uk-position-right">
+            <div class="col-md-6  mx-auto sup-cont-sign">
+                <div class="card text-center  container-sign">
+                    <div class="card-header">
+                        <h3>Inicio de Sesión</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/login" method="POST">
 
-                        <div class="uk-margin">
-                            <div class="uk-inline">
-                                <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                <input class="uk-input" name="username"  type="text">
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                    <input class="uk-input" name="username" placeholder="Nombre de usuario" type="text">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="uk-margin">
-                            <div class="uk-inline">
-                                <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                <input class="uk-input" name="password" type="password">
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                    <input class="uk-input" name="password" placeholder="Contraseña" type="password">
+                                </div>
                             </div>
-                        </div>
-                        <div class="uk-margin">
-                            <button class="uk-button uk-button-default btn-login">Iniciar sesión</button>
-                        </div>
+                            <div class="uk-margin">
+                                <button class="uk-button uk-button-default btn-login">Iniciar sesión</button>
+                            </div>
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
