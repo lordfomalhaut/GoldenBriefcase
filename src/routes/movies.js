@@ -26,7 +26,7 @@ router.post('/add', async (req, res) => {
     );
 });
 
-router.get('/', async (req, res) => {
+router.get('/list', async (req, res) => {
     const movies = await pool.query('SELECT * FROM movies');
     console.log(movies);
     res.send('peliculas iran aqui');

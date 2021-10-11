@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>Golden Briefcase | Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
@@ -19,16 +19,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/css/uikit.min.css" />
 
 
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css" onload="this.media='all'">
 </head>
 <body>
     <nav class="uk-navbar-container nav-cont" uk-navbar>
         <div class="uk-navbar-left pl-5">
-           <a class="uk-navbar-item uk-logo" href="#">
+           <a class="uk-navbar-item uk-logo" href="/">
              <img src="img\logogb.png" width="50" height="50" alt="">
            </a>
         </div>
-    
         <div class="uk-navbar-right pr-4">
             <ul class="uk-navbar-nav">
                 <li class=""><a href="/">Inicio</a></li>
@@ -36,9 +35,22 @@
                 <li><a href="/login">Inicio de sesion</a></li>
             </ul>
         </div>
-    
     </nav>
-    <h1>Hola mundo</h1>
+
+    <section class="hero-cont uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
+        <div class="opacity-bg"></div>
+        <h2 class="hero-phrase">
+            LO QUE HACEMOS EN LA VIDA, TIENE SU ECO EN LA ETERNIDAD
+        </h2>
+    </section>
+
+    <section class="sec-f">
+        <div class="sec-f-cont .uk-position-center">
+            <h2 class="mx-auto">Plataforma de visualización y <br> distribución de cine independiente</h2>
+            <p>Nuestro objetivo es hacer llegar tus proyectos a la mayor cantidad de publico posible</p>
+            <a href="/signup" class="uk-button uk-button-danger">Registrate</a>
+        </div>
+    </section>
 
 
 
@@ -50,7 +62,22 @@
 
 
 
+    <footer class="footer-cont">
+        <div class="social-media-footer ">
+            
+            <div class="social-media-footer-cont .uk-position-left">
+                <h4>Nuestras Redes</h4>
+                <a href="" uk-icon="facebook"></a>
+                <a href="" uk-icon="instagram"></a>
+                <a href="" uk-icon="twitter"></a>
+            </div>
+        </div>
 
+        <p class="p-footer">
+            Todos los derechos reservados
+        </p>
+        
+    </footer>
 
 
 
