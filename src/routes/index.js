@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-     res.send('Pagina de inicio');
-    //res.render('layouts/main');
-});
+// router.get('/', (req, res) => {
+//     // res.send('../index.html');
+//     res.render('/index');
+// });
+
 
 module.exports = router;
