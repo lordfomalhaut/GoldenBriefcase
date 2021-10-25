@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const http = require('http');
+const formidable = require('formidable');
 
 const pool = require('../database');
 
@@ -15,6 +17,7 @@ router.post('/add', async (req, res) => {
         description,
         address
     };
+    
     try {
         await pool.query('INSERT INTO movies set ?', [newMovie]);
     } catch (e) {

@@ -2,6 +2,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const pool = require('../database');
 const helpers = require('../lib/helpers');
+const nodemailer = require('nodemailer');
 
 passport.use('local.login', new LocalStrategy({
     usernameField: 'username',
@@ -34,7 +35,7 @@ passport.use('local.signup', new LocalStrategy({
         email,
     }
     newUser.password = await helpers.encryptPassword(password);
-    const result = await pool.query('INSERT INTO users SET ?', [newUser]);
+    const result =  pool.query('INSERT INTO users SET ?', [newUser]);
     newUser.id = result.insertId;    
     return done(null, newUser);   
 }));

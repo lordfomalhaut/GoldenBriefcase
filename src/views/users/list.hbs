@@ -1,13 +1,26 @@
-<table>
-    <tbody>
-        {{#each data}}
+<div class="table-content">
+    <h3>Lista de usuarios</h3>
+    
+    <table class="uk-table uk-table-striped">
+        <thead>
             <tr>
-                <td>{{this.id}}</td>
-                <td>{{this.username}}</td>
-                <td>{{this.password}}</td>
-                <td>{{this.email}}</td>
-                <td>{{this.rol}}</td>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Rol</th>
             </tr>
-        {{/each}}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            {{#each data}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.password}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.rol}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
