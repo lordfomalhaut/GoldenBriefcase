@@ -1,72 +1,31 @@
 <div class="profile-container">
     <h3>Perfil de usuario</h3>
 
-    <div>
-    <ul class="uk-child-width-expand" uk-tab>
-        <li class="uk-active tablinks"><a href="#" onclick="openTab(event, 'recientes')">Vistos Recientemente</a></li>
-        <li class="tablinks"><a href="#" onclick="openTab(event, 'favoritos')">Favoritos</a></li>
-        <li class="tablinks"><a href="#" onclick="openTab(event, 'users')">Usuarios Conectados</a></li>
-        <li><a href="#">Más <span uk-icon="icon: triangle-down"></span></a>
-        <div uk-dropdown="mode: click">
-            <ul class="uk-nav uk-dropdown-nav">
-                <li><a href="/logout" class="">Cerrar Sesión</a></li>
+    <div class="recientes">
+        <h3>Recientes</h3>
+        <div class="reientes-cont">
+            <ul class="uk-thumbnav" uk-margin>
+                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
+                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
+                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
             </ul>
-        </div></li>
-    </ul>
-</div>
+        </div>
+    </div>
 
-{{!-- <div class="table-content tabcontent" id="users">
-    <h3>Lista de usuarios</h3>
-    <table class="uk-table uk-table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Email</th>
-                <th>Rol</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each data}}
-                <tr>
-                    <td>{{this.id}}</td>
-                    <td>{{this.username}}</td>
-                    <td>{{this.password}}</td>
-                    <td>{{this.email}}</td>
-                    <td>{{this.rol}}</td>
-                </tr>
-            {{/each}}
-        </tbody>
-    </table>
-</div> --}}
+    <div class="favoritos mt-5">
+        <h3>Favoritos</h3>
+        <div class="reientes-cont">
+            <ul class="uk-thumbnav" uk-margin>
+                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
+                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
+                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="upload mt-5">
+        <h3>Subir una pelicula</h3>
+        <a class="uk-button uk-button-default" href="movies/add">Subir Pelicula</a>
+    </div>
 
 
-<div id="favoritos" class="tabcontent">
-  <h3>Opción 1</h3>
-  <p>Esta la pestaña de favoritos del usuario</p>
-</div>
-
-<div id="recientes" class="tabcontent">
-  <h3>Opción 2</h3>
-  <p>Esta es la pestaña de recientes del usuario</p>
-</div>
-
-
-<script>
-    function openTab(evt, tabName){
-        var i, tabcontent, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for(i = 0; i < tabcontent.length; i++){
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for(i = 0; i < tablinks.length; i++){
-            tablinks[i].className = tablinks[i].className.replace(" uk-active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " uk-active";
-    }
-</script>
-    
-</div>
