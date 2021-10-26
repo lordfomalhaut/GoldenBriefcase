@@ -33,9 +33,6 @@ body::after{
     border: 1px solid #a3a2a2;
     min-width: 400px;
 }
-.row-container{
-    /* max-width: 50%; */
-}
 .sup-cont-sign {
     padding-right: 400px;
     padding-top: 200px;
@@ -167,6 +164,13 @@ body::after{
 .profile-container > h3 {
     text-align: center;
     padding-top: 100px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 
 

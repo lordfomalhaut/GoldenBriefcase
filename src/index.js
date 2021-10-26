@@ -2,6 +2,8 @@ const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const fs = require('fs');
+const multer = require('multer');
 const flash = require('connect-flash');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session');
@@ -45,6 +47,8 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
+let objMulter = multer({ dest: "src\\public\\upload"});
+app.use(objMulter.any());
 
 
 // Variables Globales
