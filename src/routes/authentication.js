@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+const pool = require('../database');
 
 
 
@@ -29,7 +30,13 @@ router.post('/login', (req, res, next) => {
 
 
 router.get('/profile', (req, res) => {
-    res.render('auth/profile');
+    pool.query('SELECT * FROM movies',function(err, rows, fields){
+        
+        if (err) throw err
+        res.render('auth/profile',{ title: "Movie Data", data: rows});
+
+    });
+    
 });
 
 

@@ -3,11 +3,12 @@ const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const fs = require('fs');
-const multer = require('multer');
+//const multer = require('multer');
 const flash = require('connect-flash');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session');
 const passport = require('passport');
+const upload = require('express-fileupload');
 
 const {database} = require('./keys');
 
@@ -47,8 +48,14 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-let objMulter = multer({ dest: "src\\public\\upload"});
-app.use(objMulter.any());
+//let objMulter = multer({ dest: "src\\public\\upload"});
+//app.use(objMulter.any());
+
+app.use(upload())
+
+
+//FILES
+
 
 
 // Variables Globales

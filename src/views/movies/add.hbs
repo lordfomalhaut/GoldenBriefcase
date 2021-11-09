@@ -3,7 +3,7 @@
         <div class="col-md-4 mx-auto">
             <div class="card ">
                 <div class="card-body">
-                    <form action="/movies/add" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <input type="text" class="form-control" name="title" placeholder="Titulo">
                         </div>
@@ -13,8 +13,8 @@
                         <div class="form-group">
                             <textarea name="description" class="form-control" rows="10" placeholder="Descripcion"></textarea>
                         </div>
-                        <input type="file" name="upload_movie" id="" enctype="multipart/form-data">
-                        <div class="form-group mt-5"><button class="btn btn-success btn-block">Enviar</button></div>
+                        <input type="file" name="movie" />
+                        <div class="form-group mt-5"><input type="submit" value="Upload" class="btn btn-success btn-block" ></div>
                     </form>
                 </div>
             </div>
