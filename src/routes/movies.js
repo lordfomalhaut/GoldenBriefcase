@@ -20,7 +20,7 @@ router.post('/add',  (req, res) => {
 
     var file = req.files.movie;
     var filename = file.name;
-    var fileLink ='C:/Users/Ryzen 5/Documents/GoldenBriefcase/src/public/movies_files/'+filename;
+    var fileLink ='src\\public\\movies_files\\'+filename;
     console.log(__dirname)
     
     
