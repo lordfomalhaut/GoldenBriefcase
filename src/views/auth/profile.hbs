@@ -5,9 +5,15 @@
         <h3>Recientes</h3>
         <div class="reientes-cont">
             <ul class="uk-thumbnav" uk-margin>
-                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
-                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
-                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
+                {{#each data}}
+                    <li>
+                        <video width="250" height="200" controls>
+                            <source src={{this.address}} type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
+                {{/each}}
+
             </ul>
         </div>
     </div>

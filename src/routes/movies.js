@@ -1,42 +1,59 @@
 const express = require('express');
 const router = express.Router();
+const upload = require('express-fileupload');
 const http = require('http');
-const formidable = require('formidable');
-
+// const formidable = require('formidable');
 const pool = require('../database');
 
 router.get('/add', (req, res) => {
     res.render('movies/add');
 });
 
-router.post('/add', async (req, res) => {
-    const {title, director, description, address} = req.body;
-    const newMovie = {
-        title,
-        director,
-        description,
-        address
-    };
-    
-    try {
-        await pool.query('INSERT INTO movies set ?', [newMovie]);
-    } catch (e) {
-        console.log(e);
+
+router.post('/add',  (req, res) => {
+
+    const {title, director, description} = req.body;
+  
+    if(req.files){
+        console.log(req.files.movie);
     }
+
+    var file = req.files.movie;
+    var filename = file.name;
+    var fileLink ='C:/Users/Ryzen 5/Documents/GoldenBriefcase/src/public/movies_files/'+filename;
+    console.log(__dirname)
     
-    res.send(
-        'recibido'
-    );
+    
+
+    file.mv(fileLink, function (err){
+
+        if (err){
+            res.send(err)
+        }else{
+            var query = 'INSERT INTO movies (uploadedBy_id,title, director, description, address ) VALUES (?,?,?,?,?)';
+            try{
+                pool.query(query,[1,title,director,description,'movies_files/'+filename])
+                res.send("File Uploaded")
+            }catch(err){
+                console.log(err)
+                res.send(err)
+            }
+            
+        }
+
+        
+
+    });
 });
 
-router.get('/list', async (req, res) => {
-    const movies = await pool.query('SELECT * FROM movies');
-    console.log(movies);
-    res.send('peliculas iran aqui');
+// router.get('/list', async (req, res) => {
+//     const movies = await pool.query('SELECT * FROM movies');
+//     console.log(movies);
+//     res.send('peliculas iran aqui'); 
 
-});
-
-
+// });
 
 
-module.exports = router;
+
+
+ module.exports = router;

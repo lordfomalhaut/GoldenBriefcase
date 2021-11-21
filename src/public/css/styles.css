@@ -182,6 +182,10 @@ body::after{
 .movie-add {
     min-width: 800px;
 }
+video{
+
+height: 200px;
+}
 
 
 @keyframes animate-hero-phrase {
