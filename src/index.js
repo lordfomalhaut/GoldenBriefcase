@@ -30,12 +30,13 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 
-
+const oneDay = 1000 * 60 * 60 * 24;
 // Middlewares
 app.use(session({
     secret: 'goldenbriefcasesession',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
+    cookie: { maxAge: oneDay },
     store: new MySQLStore(database)
 }));
 app.use(flash());
