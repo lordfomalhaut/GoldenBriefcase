@@ -3,8 +3,6 @@
 }
 body{
     min-height: 100vh;
-    /* outline: 1px solid red !important; */
-  
 }
 
 body::after{
@@ -33,9 +31,7 @@ body::after{
     border: 1px solid #a3a2a2;
     min-width: 400px;
 }
-/* .row-container{
-    max-width: 50%;
-} */
+
 .sup-cont-sign {
     padding-right: 400px;
     padding-top: 200px;
@@ -76,13 +72,7 @@ body::after{
     line-height: 4;
 }
 
-/* .p-footer{
-    outline: 1px solid red;
-    padding-top: 100px;
-} */
-
 .social-media-footer{
-    /* outline: 1px solid blue; */
     min-width: 100%;
     min-height: 100%;
     padding-left: 400px;
@@ -93,16 +83,13 @@ body::after{
     margin: 10px;
 }
 
-
-
 .bg-cont-signup {
     min-height: 100vh;
-    /* background-color: red; */
     background-image: url("../img/claqueta.jpg");
 }
 
 .hero-cont {
-    min-height: 90vh;
+    min-height: 60vh;
     background-image: url("../img/hero.jpg");
 }
 .opacity-bg {
@@ -130,7 +117,6 @@ body::after{
     align-items: center;
 }
 .sec-f-cont {
-    /* background-color: red; */
     min-width: 100%;
     min-height: 400px;
     text-align: center;
@@ -160,7 +146,6 @@ body::after{
 .profile-container {
     min-height: 90vh;
     max-width: 80%;
-    /* background-color: red; */
     margin: auto;
 }
 
@@ -181,17 +166,10 @@ body::after{
 .movie-add {
     min-width: 800px;
 }
-/* video{
-    height: 200px;
-} */
 
 .uk-thumbnav>*>::after{
     background: rgba(255,255,255,0);
 }
-
-/* .recientes {
-    outline: 1px solid blue;
-} */
 
 .btn-delete-movie {
     border-radius: 5px;
