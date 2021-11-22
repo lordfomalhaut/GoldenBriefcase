@@ -1,5 +1,5 @@
 .outline{
-    outline: 1px solid red;;
+    outline: 1px solid red;
 }
 body{
     min-height: 100vh;
@@ -65,7 +65,7 @@ body::after{
 }
 
 .footer-cont {
-    min-height: 200px;
+    min-height: 100px;
     background-color: #1b1b1b;
     width: 100%;
     color: #fff;
@@ -74,13 +74,12 @@ body::after{
     justify-content: space-between;
     align-items: center;
     line-height: 4;
-    outline: 2px solid red;
 }
 
-.p-footer{
-    /* outline: 1px solid red; */
+/* .p-footer{
+    outline: 1px solid red;
     padding-top: 100px;
-}
+} */
 
 .social-media-footer{
     /* outline: 1px solid blue; */
@@ -182,11 +181,41 @@ body::after{
 .movie-add {
     min-width: 800px;
 }
-video{
+/* video{
+    height: 200px;
+} */
 
-height: 200px;
+.uk-thumbnav>*>::after{
+    background: rgba(255,255,255,0);
 }
 
+/* .recientes {
+    outline: 1px solid blue;
+} */
+
+.btn-delete-movie {
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.card-movie {
+    /* outline: 1px solid red; */
+    border-radius: 5px;
+    border: 1px solid #1b1b1b;
+    padding: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-title{
+    display: block;
+    color: black;
+}
 
 @keyframes animate-hero-phrase {
     0% { 

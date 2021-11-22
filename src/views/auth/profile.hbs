@@ -2,31 +2,37 @@
     <h3>Perfil de usuario</h3>
 
     <div class="recientes">
-        <h3>Recientes</h3>
-        <div class="reientes-cont">
-            <ul class="uk-thumbnav" uk-margin>
-                {{#each data}}
-                    <li>
-                        <video width="250" height="200" controls>
-                            <source src={{this.address}} type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </li>
-                {{/each}}
+        <h3>Subidos por ti</h3>
+        <ul class="uk-thumbnav" uk-margin>
+            {{#each data}}
+                <div class="card-movie">
+                    <h3 class="movie-title">{{this.title}}</h3>
+                    <video width="350" height="300" controls>
+                        <source src={{this.address}} type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <a class="uk-button uk-button-danger btn-delete-movie" uk-icon="trash" href="#"></a>
 
-            </ul>
-        </div>
+                </div>                   
+            {{/each}}
+        </ul>
+        <a class="uk-button uk-button-default btn-all-movies" href="movies/all/self">Ver todos</a>
     </div>
 
-    <div class="favoritos mt-5">
-        <h3>Favoritos</h3>
-        <div class="reientes-cont">
-            <ul class="uk-thumbnav" uk-margin>
-                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
-                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
-                <li><a href="#"><img src="img/claqueta.jpg" width="200" alt=""></a></li>
-            </ul>
-        </div>
+    <div class="recientes-comunidad mt-5">
+        <h3>Subidos por la comunidad</h3>
+        <ul class="uk-thumbnav" uk-margin>
+            {{#each data}}
+                <div class="card-movie">
+                    <h3 class="movie-title">{{this.title}}</h3>
+                    <video width="350" height="300" controls>
+                        <source src={{this.address}} type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>                   
+            {{/each}}
+        </ul>
+        <a class="uk-button uk-button-default btn-all-movies" href="movies/all/community">Ver todos</a>
     </div>
 
     <div class="upload mt-5">
@@ -34,4 +40,9 @@
         <a class="uk-button uk-button-default" href="movies/add">Subir Pelicula</a>
     </div>
 
+</div>
 
+<script>
+        document.getElementById('hide1').style.display = 'none';
+        document.getElementById('hide2').style.display = 'none';
+</script>

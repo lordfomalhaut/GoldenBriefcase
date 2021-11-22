@@ -34,7 +34,7 @@ router.get('/profile', (req, res) => {
         
         if (err) throw err
         res.render('auth/profile',{ title: "Movie Data", data: rows});
-
+        console.log(rows);
     });
     
 });

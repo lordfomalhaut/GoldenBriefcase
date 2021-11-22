@@ -5,6 +5,21 @@ const http = require('http');
 // const formidable = require('formidable');
 const pool = require('../database');
 
+
+router.get('/all/self', (req, res) => {
+    // pool.query('SELECT * FROM movies',function(err, rows, fields){
+        
+    //     if (err) throw err
+    //     res.render('auth/profile',{ title: "Movie Data", data: rows});
+    // });
+    res.render('movies/allmovies');
+});
+
+router.get('/all/community', (req, res) => {
+    res.render('movies/allmoviescommunity');
+});
+
+
 router.get('/add', (req, res) => {
     res.render('movies/add');
 });
