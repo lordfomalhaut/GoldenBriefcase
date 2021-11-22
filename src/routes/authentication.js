@@ -2,11 +2,12 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const pool = require('../database');
-
+const session = require('express-session')
 
 
 
 router.get('/signup', (req, res) => {
+    session=req.session;
     res.render('auth/signup');
 });
 
@@ -21,10 +22,18 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', (req, res, next) => {
-    passport.authenticate('local.login', {
-        successRedirect: '/profile',
-        failureRedirect: '/login',
-        failureFlash: true
+    passport.authenticate('local.login',(err, user, info) =>{
+        
+        console.log('Inside passport.authenticate() callback');
+        console.log(`req.session.passport: ${JSON.stringify(req.session.passport)}`)
+        console.log(`req.user: ${JSON.stringify(req.user)}`)
+        req.login(user, (err) => {
+          console.log('Inside req.login() callback')
+          console.log(`req.session.passport: ${JSON.stringify(req.session.passport)}`)
+          console.log(`req.user: ${JSON.stringify(req.user)}`)
+          return res.redirect('/profile');
+          
+        })
     })(req, res, next);
 });
 

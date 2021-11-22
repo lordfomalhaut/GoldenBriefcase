@@ -11,6 +11,7 @@ const passport = require('passport');
 const upload = require('express-fileupload');
 
 const {database} = require('./keys');
+const cookieParser = require('cookie-parser');
 
 // Inicialización
 const app = express();
@@ -41,10 +42,10 @@ app.use(session({
 }));
 app.use(flash());
 app.use(morgan('dev'));
-app.use(express.urlencoded({
-    extended: false
-}));
+app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+
+app.use(cookieParser());
 
 app.use(passport.initialize());
 app.use(passport.session());
